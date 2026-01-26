@@ -1,15 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { RegistrationForm } from "@/components/registration-form";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { useState } from "react";
 
 export function CTA() {
-	const [registered, setRegistered] = useState(false);
-
-	const handleRegister = () => {
-		setRegistered(true);
-		setTimeout(() => setRegistered(false), 3000);
-	};
+	const [isOpen, setIsOpen] = useState(false);
+	const isMobile = useMediaQuery("(max-width: 768px)");
 
 	return (
 		<section
@@ -48,50 +46,33 @@ export function CTA() {
 						recitation this blessed month. Registration closes soon!
 					</p>
 
-					{!registered ? (
-						<div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-							<Button
-								size="lg"
-								onClick={handleRegister}
-								className="bg-white text-lg text-emerald-700 hover:bg-gray-100">
-								Register Your Interest Now
-							</Button>
-							<Button
-								size="lg"
-								variant="outline"
-								className="border-2 border-white bg-transparent text-lg text-white hover:bg-white/10"
-								onClick={() => {
-									const element =
-										document.getElementById("about");
-									element?.scrollIntoView({
-										behavior: "smooth",
-									});
-								}}>
-								Learn More First
-							</Button>
-						</div>
-					) : (
-						<div className="rounded-2xl bg-white/20 p-6 backdrop-blur-sm">
-							<div className="flex items-center justify-center gap-3 text-white">
-								<svg
-									className="h-6 w-6"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={2}
-										d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-									/>
-								</svg>
-								<p className="text-lg font-semibold">
-									Thank you for your interest! We&aos;ll be in
-									touch soon.
-								</p>
-							</div>
-						</div>
-					)}
+					<div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+						<Button
+							size="lg"
+							onClick={() => setIsOpen(true)}
+							className="bg-white text-lg text-emerald-700 hover:bg-gray-100">
+							Register Your Interest Now
+						</Button>
+						<Button
+							size="lg"
+							variant="outline"
+							className="border-2 border-white bg-transparent text-lg text-white hover:bg-white/10"
+							onClick={() => {
+								const element =
+									document.getElementById("about");
+								element?.scrollIntoView({
+									behavior: "smooth",
+								});
+							}}>
+							Learn More First
+						</Button>
+					</div>
+
+					<RegistrationForm
+						open={isOpen}
+						onOpenChange={setIsOpen}
+						isMobile={isMobile}
+					/>
 
 					<div className="mt-12 grid gap-6 text-left md:grid-cols-3">
 						<div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm">

@@ -9,9 +9,9 @@ export function About() {
 						About Our Program
 					</h2>
 					<p className="mb-12 text-lg text-gray-600">
-						A community-driven initiative to help Muslims perfect
-						their Quran recitation during the blessed month of
-						Ramadan
+						A community-driven initiative to help Muslims improve
+						and complete the recitation of the holy Quran during the
+						blessed month of Ramadan
 					</p>
 				</div>
 

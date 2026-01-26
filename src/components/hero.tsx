@@ -27,18 +27,18 @@ export function Hero() {
 						</Badge>
 
 						<h1 className="text-4xl font-bold leading-tight tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-							Master Quran Recitation{" "}
+							Journey With Us to read a{" "}
 							<span className="bg-linear-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent">
-								This Ramadan
+								Complete Qur’an
 							</span>
 						</h1>
 
 						<p className="text-lg text-gray-600 md:text-xl">
-							Connect with experienced reciters or guide others in
-							perfecting Quran recitation in Arabic. Receive
-							instruction and Tafsir in your native language. Make
-							this Ramadan transformative through collaborative
-							learning.
+							Daar Ibn Amir Online Academy invites you to
+							reconnect with the Noble Qur’an this blessed month
+							of Ramadan. Learn with experienced reciters or help
+							others complete their Qur’an recitation during this
+							month of mercy and forgiveness.
 						</p>
 
 						<div className="flex flex-col gap-4 sm:flex-row lg:justify-start">
@@ -85,7 +85,7 @@ export function Hero() {
 						</div>
 					</div>
 
-					<div className="relative hidden lg:block">
+					<div className="relative">
 						<div className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl">
 							<Image
 								src="/ramadan.jpg"

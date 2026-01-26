@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -52,6 +53,11 @@ export function Header() {
 						className="text-sm font-medium text-gray-700 transition-colors hover:text-emerald-600">
 						Languages
 					</button>
+					<Link
+						href="/passcode"
+						className="text-sm font-medium text-gray-700 transition-colors hover:text-emerald-600">
+						Dashboard
+					</Link>
 					<Button
 						onClick={() => scrollToSection("register")}
 						className="bg-emerald-600 hover:bg-emerald-700">
@@ -104,6 +110,11 @@ export function Header() {
 							className="text-left text-sm font-medium text-gray-700">
 							Languages
 						</button>
+						<Link
+							href="/passcode"
+							className="text-left text-sm font-medium text-gray-700">
+							Dashboard
+						</Link>
 						<Button
 							onClick={() => scrollToSection("register")}
 							className="w-full bg-emerald-600 hover:bg-emerald-700">
