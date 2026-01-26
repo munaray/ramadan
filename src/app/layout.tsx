@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ramadan Quran Recitation | Connect & Learn Together",
-  description: "Join our Ramadan Quran recitation program. Connect with experienced reciters or guide others in mastering Quran recitation this blessed month.",
+  title: "Journey With Us to Read a Complete Qur'an | Ramadan 2026",
+  description: "Reconnect with the Noble Qur'an this Ramadan. A community-driven initiative to help Muslims improve and complete their Quran recitation during this blessed month of mercy and forgiveness.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
