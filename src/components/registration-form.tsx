@@ -293,14 +293,14 @@ export function RegistrationForm({
 	if (isMobile) {
 		return (
 			<Drawer open={open} onOpenChange={onOpenChange}>
-				<DrawerContent className="px-4 pb-8">
-					<DrawerHeader>
+				<DrawerContent className="max-h-[90vh]">
+					<DrawerHeader className="px-4">
 						<DrawerTitle>Register Your Interest</DrawerTitle>
 						<DrawerDescription>
 							Join our Ramadan Quran recitation program
 						</DrawerDescription>
 					</DrawerHeader>
-					<div className="mt-4">
+					<div className="overflow-y-auto px-4 pb-8">
 						<RegistrationFormContent
 							onClose={() => onOpenChange(false)}
 						/>
