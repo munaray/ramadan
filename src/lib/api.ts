@@ -1,4 +1,5 @@
-const API_BASE_URL = "/api";
+const EXTERNAL_API_URL = "https://staging.myajocycle.com/api";
+const PROXY_API_URL = "/api";
 const DEFAULT_HEADERS = {
   Accept: "application/json",
 } as const;
@@ -93,7 +94,7 @@ export async function createRegistration(
   data: RegistrationData
 ): Promise<Registration> {
   const result = await fetchJson<ApiResponse<Registration>>(
-    `${API_BASE_URL}/registrations`,
+    `${PROXY_API_URL}/registrations`,
     {
       method: "POST",
       headers: {
@@ -109,7 +110,7 @@ export async function createRegistration(
 
 export async function getRegistrations(): Promise<Registration[]> {
   const result = await fetchJson<ApiResponse<Registration[]>>(
-    `${API_BASE_URL}/registrations`,
+    `${EXTERNAL_API_URL}/rewards`,
     {
       cache: "no-store",
     },
